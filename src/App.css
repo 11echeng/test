@@ -36,3 +36,38 @@
     transform: rotate(360deg);
   }
 }
+
+/* .sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 10px;
+  background-color: #f5f5f5;
+  padding: 20px;
+} */
+
+/* .dashboard {
+  margin-left: 220px;
+  margin-top: -1275px;
+
+} */
+
+/* .sidebar-sticky {
+  position: relative;
+  top: 0;
+  width: 150px;
+  height: calc(100vh - 48px);
+  padding-top: .5rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+@media (max-width: 767.98px) {
+  .sidebar {
+    top: 5rem;
+    padding: 0;
+    height: calc(100vh - 5rem);
+    box-shadow: none;
+  }
+}
+ */
