@@ -71,3 +71,19 @@
   }
 }
  */
+/* App.css */
+/* normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+
+/*========== GLOBAL STYLES ==========*/
+
+.app {
+  display: flex;
+  height: 100vh;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+  overflow-y: auto;
+}

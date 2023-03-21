@@ -1,0 +1,23 @@
+/* .sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    background-color: #30404d;
+    padding: 20px;
+    min-width: 300px;
+    max-width: 33.33%;
+    box-sizing: border-box;
+  } */
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 20px;
+    background-color: #30404d;
+    color: #f5f8fa;
+  }
+
+  .sidebar h2 {
+    margin-bottom: 20px;
+  }

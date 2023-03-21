@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Button, FormGroup, HTMLSelect } from '@blueprintjs/core';
+import '../Sidebar.css'
 
 function Sidebar({
   onPropertyTypeChange, onPriceChange, onReset, propertyType, price,
@@ -9,34 +11,43 @@ function Sidebar({
   };
 
   return (
-    <div className="sidebar">
+    <div className="sidebar bp3-dark">
       <h2>Filter</h2>
-      <div>
-        <label htmlFor="property-type">Property Type:</label>
-        <select id="property-type" value={propertyType} onChange={onPropertyTypeChange}>
-          <option value="">All</option>
-          <option value="Apartment">Apartment</option>
-          <option value="Cabin">Cabin</option>
-          <option value="House">House</option>
-          <option value="Trailer">Trailer</option>
-          <option value="Villa">Villa</option>
-        </select>
-      </div>
-      <div>
-        <label htmlFor="price">Price:</label>
-        <select id="price" value={price} onChange={onPriceChange}>
-          <option value="">All</option>
-          <option value="0-100">$0 - $100</option>
-          <option value="100-300">$100 - $300</option>
-          <option value="300-500">$300 - $500</option>
-          <option value="500-800">$500 - $800</option>
-          <option value="800+">$800+</option>
-        </select>
-      </div>
-      <button onClick={handleResetClick}>Reset</button>
+      <FormGroup label="Property Type" labelFor="property-type">
+        <HTMLSelect
+          id="property-type"
+          value={propertyType}
+          onChange={onPropertyTypeChange}
+          options={[
+            { value: '', label: 'All' },
+            { value: 'Apartment', label: 'Apartment' },
+            { value: 'Cabin', label: 'Cabin' },
+            { value: 'House', label: 'House' },
+            { value: 'Trailer', label: 'Trailer' },
+            { value: 'Villa', label: 'Villa' },
+          ]}
+        />
+      </FormGroup>
+      <FormGroup label="Price" labelFor="price">
+        <HTMLSelect
+          id="price"
+          value={price}
+          onChange={onPriceChange}
+          options={[
+            { value: '', label: 'All' },
+            { value: '0-100', label: '$0 - $100' },
+            { value: '100-300', label: '$100 - $300' },
+            { value: '300-500', label: '$300 - $500' },
+            { value: '500-800', label: '$500 - $800' },
+            { value: '800+', label: '$800+' },
+          ]}
+        />
+      </FormGroup>
+      <Button onClick={handleResetClick} intent="danger">Reset</Button>
     </div>
   );
 }
+
 
 Sidebar.propTypes = {
   onPropertyTypeChange: PropTypes.func.isRequired,
